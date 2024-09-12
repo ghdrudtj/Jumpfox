@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private Player Player;
+    private void Awake()
+    {
+        Player.Init();
+    }
     void Start()
     {
         
@@ -13,4 +18,5 @@ public class GameManager : MonoBehaviour
     {
         
     }
+   
 }
