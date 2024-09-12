@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float JumpPower = 3;
     public float MoveSpeed = 3;
     private bool shouldRotate = false;
+    public bool isFloor = false;
 
     int playerLayer, platformLayer;
 
@@ -31,11 +32,16 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (isFloor)
         {
-            animator.SetBool("Jump", true);
-            rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+            if (Input.GetKeyDown(KeyCode.Space)) 
+            {
+                isFloor = false;
+                animator.SetBool("Jump", true);
+                rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+            }
         }
+        Invoke("PlayerMove", 1f);
         PlayerMove();
         if (shouldRotate)
         {
@@ -58,6 +64,10 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             shouldRotate = true;
+        }
+        if (collision.gameObject.CompareTag("platform"))
+        {
+            isFloor = true;
         }
     }
 }
