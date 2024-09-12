@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
             }
         }
         Invoke("PlayerMove", 1f);
-        PlayerMove();
         if (shouldRotate)
         {
             // 180µµ È¸Àü
