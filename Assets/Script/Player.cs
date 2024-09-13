@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+    [SerializeField] private float JumpPowerIncrease;
     public float JumpPower;
     public float MoveSpeed = 3;
     private bool shouldRotate = false;
@@ -40,7 +42,7 @@ public class Player : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.Space))
             {
-                JumpPower += 0.1f;
+                JumpPower += JumpPowerIncrease;
                 animator.SetInteger("Jump", 1);
             }
             else if(Input.GetKeyUp(KeyCode.Space))
@@ -63,7 +65,7 @@ public class Player : MonoBehaviour
         else
             Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, false);
     }
-    private void PlayerMove()
+    public void PlayerMove()
     {
         this.transform.Translate(MoveSpeed * Time.deltaTime, 0, 0);
     }
