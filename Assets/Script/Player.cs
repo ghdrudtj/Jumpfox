@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float JumpPower = 3;
+    public float JumpPower;
     public float MoveSpeed = 3;
     private bool shouldRotate = false;
     public bool isFloor = false;
@@ -36,10 +36,20 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space)) 
             {
-                isFloor = false;
-                animator.SetBool("Jump", true);
-                rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+                animator.SetInteger("Jump", 0);
             }
+            else if (Input.GetKey(KeyCode.Space))
+            {
+                JumpPower += 0.1f;
+                animator.SetInteger("Jump", 1);
+            }
+            else if(Input.GetKeyUp(KeyCode.Space))
+            {
+                isFloor = false;
+                rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+                animator.SetInteger("Jump", 2);
+                JumpPower = 0;
+            } 
         }
         Invoke("PlayerMove", 1f);
         if (shouldRotate)
@@ -55,7 +65,6 @@ public class Player : MonoBehaviour
     }
     private void PlayerMove()
     {
-        animator.SetBool("Jump", false);
         this.transform.Translate(MoveSpeed * Time.deltaTime, 0, 0);
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -66,6 +75,7 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("platform"))
         {
+            animator.SetInteger("Jump", 0);
             isFloor = true;
         }
     }
