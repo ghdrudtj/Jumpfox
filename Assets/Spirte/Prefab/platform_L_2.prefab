@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1891437453774271198, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1891437453774271198, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50,11 +50,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5190079885353141939, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
       propertyPath: m_Size.y
-      value: 1.7109194
+      value: 0.79448056
       objectReference: {fileID: 0}
     - target: {fileID: 5190079885353141939, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
       propertyPath: m_Offset.y
-      value: 0.19308329
+      value: 0.6513027
       objectReference: {fileID: 0}
     - target: {fileID: 6114902727696664646, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
       propertyPath: m_ChunkCullingBounds.x

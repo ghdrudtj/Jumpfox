@@ -25,13 +25,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[1].m_Data
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300256, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
     - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_Tiles.Array.data[1].second.m_TileIndex
       value: 2
@@ -53,12 +57,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[1].m_RefCount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[2].m_RefCount
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
+      propertyPath: m_Tiles.Array.data[0].second.m_TileSpriteIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 692111762432633588, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_Tiles.Array.data[1].second.m_TileSpriteIndex
@@ -82,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9100707937323045316, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9100707937323045316, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_LocalPosition.z

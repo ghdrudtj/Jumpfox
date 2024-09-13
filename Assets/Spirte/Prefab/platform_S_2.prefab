@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 152885945482404259, guid: 8f70b0bc841d341478b872a8661d08aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 152885945482404259, guid: 8f70b0bc841d341478b872a8661d08aa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5775385531112920526, guid: 8f70b0bc841d341478b872a8661d08aa, type: 3}
       propertyPath: m_Size.y
-      value: 1.7214777
+      value: 0.6901281
       objectReference: {fileID: 0}
     - target: {fileID: 5775385531112920526, guid: 8f70b0bc841d341478b872a8661d08aa, type: 3}
       propertyPath: m_Offset.y
-      value: 1.103988
+      value: 1.6196629
       objectReference: {fileID: 0}
     - target: {fileID: 8487529003723102867, guid: 8f70b0bc841d341478b872a8661d08aa, type: 3}
       propertyPath: m_Tiles.Array.size
