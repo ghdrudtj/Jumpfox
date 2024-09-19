@@ -30,15 +30,6 @@ public class PlatformManager : MonoBehaviour
             return platformID;
         }
     }
-    public Platform[] LargePlatformArr;
-    public Platform[] MiddlePlatformArr;
-    public Platform[] SmallPlatformArr;
-    public PlatformManager.Data[] DataArr;
-
-    public float GapIntervaMin = 5;
-    public float GapIntervaMax = 8;
-    public float GapX_Min = -3.45f;
-    public float GapX_Max = 2.25f;
     
     public static PlatformManager instance; 
     [SerializeField] private Transform SpawnPosTrf;
@@ -50,7 +41,7 @@ public class PlatformManager : MonoBehaviour
         Vector3 pos = SpawnPosTrf.position;
         int platformGroupSum = 0;
 
-        foreach(Data data in DataArr)
+        foreach(Data data in DataBaseManager.instance.DataArr)
         {
             platformGroupSum += data.GroupCount;
             Debug.Log($"platformGroupSum :{platformGroupSum}");
@@ -70,20 +61,20 @@ public class PlatformManager : MonoBehaviour
         Platform randomplatform = platforms[randID];
 
         Platform platform = Instantiate(randomplatform);
-        pos.x = Random.Range(GapX_Max, GapX_Min);
+        pos.x = Random.Range(DataBaseManager.instance.GapX_Max, DataBaseManager.instance.GapX_Min);
         if (platformNum != 0)
             pos = pos + Vector3.up * platform.GatHelfSizeY();
         platform.Active(pos);
 
-        float gap = Random.Range(GapIntervaMin, GapIntervaMax);
+        float gap = Random.Range(DataBaseManager.instance.GapIntervaMin, DataBaseManager.instance.GapIntervaMax);
         pos += Vector3.up * (platform.GatHelfSizeY()+gap);
         return pos;
     }
     internal void Init()
     {
-        PlatformArrDic.Add(0, SmallPlatformArr);
-        PlatformArrDic.Add(1, MiddlePlatformArr);
-        PlatformArrDic.Add(2, LargePlatformArr);
+        PlatformArrDic.Add(0, DataBaseManager.instance.SmallPlatformArr);
+        PlatformArrDic.Add(1, DataBaseManager.instance.MiddlePlatformArr);
+        PlatformArrDic.Add(2, DataBaseManager.instance.LargePlatformArr);
     }
     private void Awake()
     {

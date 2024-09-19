@@ -21,7 +21,7 @@ public class CameraManager : MonoBehaviour
         {
             player =GameObject.FindGameObjectWithTag("Player");
         }
-        transform.position = new Vector3(0, player.transform.position.y+ 3.25f, -10);
+        transform.position = new Vector3(0, Player.instance.playerpos.transform.position.y + 3f, -10) ;
         
     }
 }

@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
     }
     void TotalScore()
     {
-        scoreTmp.text = totalScore.ToString();
+        scoreTmp.text = $"{totalScore}/{DataBaseManager.instance.MaxScore}".ToString();
     }
     void Update()
     {

@@ -45,3 +45,4 @@ MonoBehaviour:
   baseItem: {fileID: 1506912263625124149, guid: 87877006a8ba6e540883b4bb7046a50f, type: 3}
   itemSpawnPer: 1
   itemScore: 1
+  MaxScore: 100

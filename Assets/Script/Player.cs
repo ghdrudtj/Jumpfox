@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance;
+    public static Player instance;
     public float JumpPower;
     public float MoveSpeed = 3;
     private bool shouldRotate = false;
     public bool isFloor = false;
     public float minXPosition;
     public float maxXPosition;
+    public GameObject playerpos;
 
     int playerLayer, platformLayer;
 
@@ -27,7 +28,7 @@ public class Player : MonoBehaviour
     }
     internal void Init()
     {
-        
+        instance = this;
     }
     void Start()
     {
