@@ -7,13 +7,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player Player;
     [SerializeField] private PlatformManager PlatformManager;
     [SerializeField] private CameraManager CameraManager;
-    [SerializeField] private Platform Platform;
+    [SerializeField] private ScoreManager ScoreManager;
+    [SerializeField] private DataBaseManager DataBaseManager;
+    
     private void Awake()
     {
-        Platform.Init();
-        PlatformManager.Init();
+        DataBaseManager.Init();
         Player.Init();
+        PlatformManager.Init();
         CameraManager.Init();   
+        ScoreManager.Init();
     }
     void Start()
     {

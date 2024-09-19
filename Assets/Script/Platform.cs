@@ -9,8 +9,12 @@ public class Platform : MonoBehaviour
     internal void Active(Vector3 pos)
     {
         transform.position = pos;
-        
-            //Player.Instance.PlayerMove(transform.position, GatHelfSizeX());
+
+        if(Random.value < DataBaseManager.instance.itemSpawnPer)
+        {
+            item items = Instantiate<item>(DataBaseManager.instance.baseItem);
+            items.Active(transform.position, GatHelfSizeX());
+        }
     }
     internal void Init()
     {

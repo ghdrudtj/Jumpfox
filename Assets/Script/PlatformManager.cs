@@ -30,20 +30,20 @@ public class PlatformManager : MonoBehaviour
             return platformID;
         }
     }
+    public Platform[] LargePlatformArr;
+    public Platform[] MiddlePlatformArr;
+    public Platform[] SmallPlatformArr;
+    public PlatformManager.Data[] DataArr;
+
+    public float GapIntervaMin = 5;
+    public float GapIntervaMax = 8;
+    public float GapX_Min = -3.45f;
+    public float GapX_Max = 2.25f;
+    
     public static PlatformManager instance; 
     [SerializeField] private Transform SpawnPosTrf;
-    [SerializeField] private Platform[] LargePlatformArr;
-    [SerializeField] private Platform[] MiddlePlatformArr;
-    [SerializeField] private Platform[] SmallPlatformArr;
-    [SerializeField] private Data[] DataArr;
     private int platformNum;
 
-    [SerializeField] private float GapIntervaMin = 5;
-    [SerializeField] private float GapIntervaMax = 8;
-
-    [SerializeField] private float GapX_Min = -3.45f;
-    [SerializeField] private float GapX_Max = 2.25f;
-   
     Dictionary<int, Platform[]> PlatformArrDic = new Dictionary<int, Platform[]>();
     internal void Active()
     {
@@ -70,12 +70,12 @@ public class PlatformManager : MonoBehaviour
         Platform randomplatform = platforms[randID];
 
         Platform platform = Instantiate(randomplatform);
-        pos.x=Random.Range(GapX_Max,GapX_Min);
+        pos.x = Random.Range(GapX_Max, GapX_Min);
         if (platformNum != 0)
             pos = pos + Vector3.up * platform.GatHelfSizeY();
         platform.Active(pos);
 
-        float gap = Random.Range(GapIntervaMin,GapIntervaMax);
+        float gap = Random.Range(GapIntervaMin, GapIntervaMax);
         pos += Vector3.up * (platform.GatHelfSizeY()+gap);
         return pos;
     }
@@ -85,7 +85,9 @@ public class PlatformManager : MonoBehaviour
         PlatformArrDic.Add(1, MiddlePlatformArr);
         PlatformArrDic.Add(2, LargePlatformArr);
     }
-
+    private void Awake()
+    {
+    }
     void Start()
     {
         

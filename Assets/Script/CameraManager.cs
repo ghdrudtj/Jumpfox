@@ -10,13 +10,6 @@ public class CameraManager : MonoBehaviour
     {
         instance = this;
     }
-    /*public IEnumerator OnFollowCor(Vector2 targetPos)
-    {
-    }
-    public void OnFollow(Vector2 targePos)
-    {
-        StartCoroutine(OnFollowCor(targePos));
-    }*/
     void Start()
     {
         

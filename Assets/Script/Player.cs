@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance;
-    [SerializeField] private float JumpPowerIncrease;
     public float JumpPower;
     public float MoveSpeed = 3;
     private bool shouldRotate = false;
@@ -31,8 +31,7 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-       // minXPosition = Platform.instance.GatHelfSizeX() * -1;
-       // maxXPosition = Platform.instance.GatHelfSizeX();
+    
     }
 
     void Update()
@@ -45,7 +44,7 @@ public class Player : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.Space))
             {
-                JumpPower += JumpPowerIncrease;
+                JumpPower += DataBaseManager.instance.JumpPowerIncrease;
                 animator.SetInteger("Jump", 1);
             }
             else if(Input.GetKeyUp(KeyCode.Space))
@@ -87,6 +86,10 @@ public class Player : MonoBehaviour
         {
             animator.SetInteger("Jump", 0);
             isFloor = true;
+        }
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
