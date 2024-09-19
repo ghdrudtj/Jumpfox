@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public float MoveSpeed = 3;
     private bool shouldRotate = false;
     public bool isFloor = false;
+    public float minXPosition;
+    public float maxXPosition;
 
     int playerLayer, platformLayer;
 
@@ -29,7 +31,8 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        
+       // minXPosition = Platform.instance.GatHelfSizeX() * -1;
+       // maxXPosition = Platform.instance.GatHelfSizeX();
     }
 
     void Update()
@@ -68,6 +71,11 @@ public class Player : MonoBehaviour
     public void PlayerMove()
     {
         this.transform.Translate(MoveSpeed * Time.deltaTime, 0, 0);
+
+        /*if (isFloor = true || minXPosition > this.transform.position.x || maxXPosition < this.transform.position.x)
+        {
+            shouldRotate = true;
+        }*/
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

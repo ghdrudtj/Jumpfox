@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
+    public static Platform instance;
     private BoxCollider2D cof;
     internal void Active(Vector3 pos)
     {
         transform.position = pos;
         
             //Player.Instance.PlayerMove(transform.position, GatHelfSizeX());
+    }
+    internal void Init()
+    {
+
     }
     public float GatHelfSizeY()
     {

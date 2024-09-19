@@ -30,6 +30,7 @@ public class PlatformManager : MonoBehaviour
             return platformID;
         }
     }
+    public static PlatformManager instance; 
     [SerializeField] private Transform SpawnPosTrf;
     [SerializeField] private Platform[] LargePlatformArr;
     [SerializeField] private Platform[] MiddlePlatformArr;

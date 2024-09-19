@@ -100,6 +100,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8614915341157425088, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614915341157425088, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
+      propertyPath: m_Offset.x
+      value: -2.3127804
+      objectReference: {fileID: 0}
     - target: {fileID: 9100707937323045316, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

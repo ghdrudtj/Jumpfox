@@ -439,6 +439,7 @@ MonoBehaviour:
   Player: {fileID: 1002642967}
   PlatformManager: {fileID: 185383121}
   CameraManager: {fileID: 1066978317}
+  Platform: {fileID: 747932335989286258, guid: 6dfe190407c72194aa87df1c75fd599b, type: 3}
 --- !u!4 &715891854
 Transform:
   m_ObjectHideFlags: 0
@@ -685,6 +686,8 @@ MonoBehaviour:
   JumpPower: 1
   MoveSpeed: 3
   isFloor: 0
+  minXPosition: 0
+  maxXPosition: 0
 --- !u!1 &1066978315
 GameObject:
   m_ObjectHideFlags: 0
