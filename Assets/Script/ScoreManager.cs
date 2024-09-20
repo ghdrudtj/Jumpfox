@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private Score baseScore;
 
     public int totalScore;
+    public int BestScore;
     internal void Init()
     {
         instance = this;
@@ -30,5 +32,11 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         TotalScore();
+
+        if(totalScore > BestScore)
+        {
+            BestScore = totalScore;
+        }
     }
+   
 }

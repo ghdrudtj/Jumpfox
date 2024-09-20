@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f27c0403c103544add8a0a5dcc1e90, type: 3}
   m_Name: DataBaseManager
   m_EditorClassIdentifier: 
-  JumpPowerIncrease: 0.1
+  JumpPowerIncrease: 0.25
   GameOverYNeight: -10
   LargePlatformArr:
   - {fileID: 7931605914246252136, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
