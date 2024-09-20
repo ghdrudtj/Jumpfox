@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DataBaseManager
   m_EditorClassIdentifier: 
   JumpPowerIncrease: 0.1
+  GameOverYNeight: -10
   LargePlatformArr:
   - {fileID: 7931605914246252136, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
   - {fileID: 8905878684349639115, guid: 95c3d49b409270140910e52d002815a4, type: 3}
@@ -38,8 +39,8 @@ MonoBehaviour:
     LargePercent: 0.2
     MiddlePercent: 0.5
     SmallPercent: 0.3
-  GapIntervaMin: 5
-  GapIntervaMax: 8
+  GapIntervaMin: 4
+  GapIntervaMax: 10
   GapX_Min: -3.45
   GapX_Max: 2.25
   baseItem: {fileID: 1506912263625124149, guid: 87877006a8ba6e540883b4bb7046a50f, type: 3}

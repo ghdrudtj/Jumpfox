@@ -10,15 +10,15 @@ public class Player : MonoBehaviour
     public float MoveSpeed = 3;
     private bool shouldRotate = false;
     public bool isFloor = false;
-    public float minXPosition;
-    public float maxXPosition;
     public GameObject playerpos;
 
     int playerLayer, platformLayer;
 
     private Rigidbody2D rb;
     private Animator animator;
+    public float pleyerY;
 
+    [SerializeField] public GameObject rePalyBtn;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -71,11 +71,6 @@ public class Player : MonoBehaviour
     public void PlayerMove()
     {
         this.transform.Translate(MoveSpeed * Time.deltaTime, 0, 0);
-
-        /*if (isFloor = true || minXPosition > this.transform.position.x || maxXPosition < this.transform.position.x)
-        {
-            shouldRotate = true;
-        }*/
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -91,6 +86,11 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Item"))
         {
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Trap"))
+        {
+            rePalyBtn.SetActive(true);
+            Debug.Log("게임 오버 ");
         }
     }
 }

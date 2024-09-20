@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CameraManager CameraManager;
     [SerializeField] private ScoreManager ScoreManager;
     [SerializeField] private DataBaseManager DataBaseManager;
+    [SerializeField] public GameObject rePalyBtn;
     
     private void Awake()
     {
@@ -25,7 +27,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if(ScoreManager.instance.totalScore >= 100)
+        {
+            SceneManager.LoadScene("End");
+        }
     }
-   
+    public void GameOver()
+    {
+        rePalyBtn.SetActive(true);
+    }
+    public void rePlay()
+    {
+        SceneManager.LoadScene("Main");
+    }
+        
 }

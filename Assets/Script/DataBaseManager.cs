@@ -10,6 +10,7 @@ public class DataBaseManager : ScriptableObject
     public static DataBaseManager instance;
     [Header("ÇÃ·¹ÀÌ¾î")]
     public float JumpPowerIncrease;
+    public float GameOverYNeight = -10f;
 
     [Header("ÇÃ·§Æû")]
     public Platform[] LargePlatformArr;
