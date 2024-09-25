@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class TrapManager : MonoBehaviour
 {
-    [SerializeField] private int TrapSpeed;
     void Start()
     {
         
@@ -13,9 +12,9 @@ public class TrapManager : MonoBehaviour
 
     void Update()
     {
-        if(ScoreManager.instance.totalScore >= 3)
+        if(ScoreManager.instance.totalScore >= DataBaseManager.instance.TrapActiveScore)
         {
-            this.transform.Translate(0, TrapSpeed * Time.deltaTime, 0);
+            this.transform.Translate(0, DataBaseManager.instance.TrapSpeed * Time.deltaTime, 0);
         }
     }
 }

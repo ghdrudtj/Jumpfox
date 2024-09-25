@@ -16,6 +16,11 @@ public class item : MonoBehaviour
         {
             ScoreManager.instance.totalScore += score;
             Destroy(gameObject);
+
+            if (ScoreManager.instance.totalScore > ScoreManager.instance.BestScore)
+            {
+                ScoreManager.instance.BestScore = ScoreManager.instance.totalScore;
+            }
         }
     }
     void Start()

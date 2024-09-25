@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     [SerializeField] private Player Player;
     [SerializeField] private PlatformManager PlatformManager;
     [SerializeField] private CameraManager CameraManager;

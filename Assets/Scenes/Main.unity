@@ -1084,9 +1084,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpPower: 1
-  MoveSpeed: 3
   isFloor: 0
+  isstop: 0
   playerpos: {fileID: 1998184594}
+  Renderer: {fileID: 0}
   pleyerY: 0
   rePalyBtn: {fileID: 1331570273}
 --- !u!1 &1066978315
@@ -1279,7 +1280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fffe9c1211359145b0255c0c15389ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrapSpeed: 5
 --- !u!1 &1179053206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,8 +1364,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1449,7 +1449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1331570275
@@ -1931,7 +1931,7 @@ GameObject:
   - component: {fileID: 2023022223}
   - component: {fileID: 2023022222}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1984,7 +1984,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.2380311, y: 0.025009751}
+  m_Offset: {x: 2.2380311, y: 123.6884}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1995,7 +1995,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6225505, y: 3.2308533}
+  m_Size: {x: 0.6225505, y: 250.55765}
   m_EdgeRadius: 0
 --- !u!61 &2023022223
 BoxCollider2D:
@@ -2029,7 +2029,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.2619603, y: 0.007745385}
+  m_Offset: {x: -2.2988183, y: 123.7917}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2040,7 +2040,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6376729, y: 3.2391746}
+  m_Size: {x: 0.71148777, y: 250.80707}
   m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

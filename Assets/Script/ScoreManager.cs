@@ -32,11 +32,5 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         TotalScore();
-
-        if(totalScore > BestScore)
-        {
-            BestScore = totalScore;
-        }
     }
-   
 }

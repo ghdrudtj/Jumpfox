@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Platform : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class Platform : MonoBehaviour
         {
             item items = Instantiate<item>(DataBaseManager.instance.baseItem);
             items.Active(transform.position, GatHelfSizeX());
+        }
+        if(Random.value < DataBaseManager.instance.MonSpawnPer)
+        {
+            Monster monster = Instantiate<Monster>(DataBaseManager.instance.baseMonster);
+            monster.Active(transform.position, GatHelfSizeX());
         }
     }
     internal void Init()

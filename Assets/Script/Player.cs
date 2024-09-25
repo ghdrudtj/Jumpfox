@@ -7,20 +7,22 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
     public float JumpPower;
-    public float MoveSpeed = 3;
     private bool shouldRotate = false;
     public bool isFloor = false;
+    public bool isstop =false;
     public GameObject playerpos;
 
     int playerLayer, platformLayer;
 
     private Rigidbody2D rb;
     private Animator animator;
+    public SpriteRenderer Renderer;
     public float pleyerY;
 
     [SerializeField] public GameObject rePalyBtn;
     void Awake()
     {
+        Renderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         playerLayer = LayerMask.NameToLayer("player");
@@ -46,14 +48,22 @@ public class Player : MonoBehaviour
             else if (Input.GetKey(KeyCode.Space))
             {
                 JumpPower += DataBaseManager.instance.JumpPowerIncrease;
+                Debug.Log("현 점수 파워 = " + JumpPower);
                 animator.SetInteger("Jump", 1);
             }
             else if(Input.GetKeyUp(KeyCode.Space))
             {
-                isFloor = false;
-                rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
-                animator.SetInteger("Jump", 2);
-                JumpPower = 0;
+                if (JumpPower < DataBaseManager.instance.maxJumpPower || JumpPower > DataBaseManager.instance.minJumpPower)
+                {
+                    isFloor = false;
+                    rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
+                    JumpPower = 0;
+                    animator.SetInteger("Jump", 2);
+                }
+                else
+                {
+                    SetIdleState();
+                }
             } 
         }
         Invoke("PlayerMove", 1f);
@@ -68,9 +78,19 @@ public class Player : MonoBehaviour
         else
             Physics2D.IgnoreLayerCollision(playerLayer, platformLayer, false);
     }
+    private void SetIdleState()
+    {
+        isFloor = true;
+        rb.velocity = Vector2.zero;
+        animator.SetInteger("StateID", 0);
+        JumpPower = 0;
+    }
     public void PlayerMove()
     {
-        this.transform.Translate(MoveSpeed * Time.deltaTime, 0, 0);
+        if (!isstop)
+        {
+            this.transform.Translate(DataBaseManager.instance.MoveSpeed * Time.deltaTime, 0, 0);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -92,5 +112,7 @@ public class Player : MonoBehaviour
             rePalyBtn.SetActive(true);
             Debug.Log("게임 오버 ");
         }
+       
     }
+   
 }

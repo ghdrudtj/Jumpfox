@@ -11,6 +11,9 @@ public class DataBaseManager : ScriptableObject
     [Header("플레이어")]
     public float JumpPowerIncrease;
     public float GameOverYNeight = -10f;
+    public int MoveSpeed;
+    public float minJumpPower;
+    public float maxJumpPower;
 
     [Header("플랫폼")]
     public Platform[] LargePlatformArr;
@@ -28,6 +31,15 @@ public class DataBaseManager : ScriptableObject
     public float itemSpawnPer;
     public int itemScore = 1;
     public int MaxScore = 100;
+
+    [Header("함정")]
+    public int TrapSpeed;
+    public int TrapActiveScore;
+
+    [Header("몬스터")]
+    public Monster baseMonster;
+    public float MonSpawnPer;
+    public int MonMoveSpeed;
     internal void Init()
     {
         instance = this;

@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumpPowerIncrease: 0.25
   GameOverYNeight: -10
+  MoveSpeed: 3
+  minJumpPower: 50
+  maxJumpPower: 100
   LargePlatformArr:
   - {fileID: 7931605914246252136, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
   - {fileID: 8905878684349639115, guid: 95c3d49b409270140910e52d002815a4, type: 3}
@@ -27,15 +30,15 @@ MonoBehaviour:
   - {fileID: 1637486296666605394, guid: 74b12a19f82137f4da4b40a7eed23a93, type: 3}
   - {fileID: 8516919516167165205, guid: 8f70b0bc841d341478b872a8661d08aa, type: 3}
   DataArr:
-  - GroupCount: 5
+  - GroupCount: 150
     LargePercent: 0.8
     MiddlePercent: 0.1
     SmallPercent: 0.1
-  - GroupCount: 5
+  - GroupCount: 150
     LargePercent: 0.4
     MiddlePercent: 0.3
     SmallPercent: 0.3
-  - GroupCount: 5
+  - GroupCount: 150
     LargePercent: 0.2
     MiddlePercent: 0.5
     SmallPercent: 0.3
@@ -47,3 +50,8 @@ MonoBehaviour:
   itemSpawnPer: 1
   itemScore: 1
   MaxScore: 100
+  TrapSpeed: 5
+  TrapActiveScore: 10
+  baseMonster: {fileID: 2967503038389758692, guid: 8aa1d33957bbc1b459d4ce39ba2ef4e3, type: 3}
+  MonSpawnPer: 0.25
+  MonMoveSpeed: 2
