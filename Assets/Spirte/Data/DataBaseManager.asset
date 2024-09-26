@@ -15,7 +15,6 @@ MonoBehaviour:
   JumpPowerIncrease: 0.25
   GameOverYNeight: -10
   MoveSpeed: 3
-  minJumpPower: 50
   maxJumpPower: 100
   LargePlatformArr:
   - {fileID: 7931605914246252136, guid: f8675e9003f9c9e488be1bdf4429b015, type: 3}
@@ -49,10 +48,10 @@ MonoBehaviour:
   baseItem: {fileID: 1506912263625124149, guid: 87877006a8ba6e540883b4bb7046a50f, type: 3}
   itemSpawnPer: 1
   itemScore: 1
-  MaxScore: 10
+  MaxScore: 5
   TrapSpeed: 5
-  TrapActiveScore: 10
+  TrapActiveScore: 3
   baseMonster: {fileID: 2967503038389758692, guid: 8aa1d33957bbc1b459d4ce39ba2ef4e3, type: 3}
-  MonSpawnPer: 0.25
+  MonSpawnPer: 0.5
   MonMoveSpeed: 2
   effect: {fileID: -6835776161348996328, guid: f62a2a74200ed1443a28db5d051856ac, type: 3}

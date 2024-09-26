@@ -38,7 +38,7 @@ public class CameraManager : MonoBehaviour
             {
                 if (Player.instance.isFloor == false)
                 {
-                    bgSrdr.size += new Vector2(0, 0.03f); // Y 방향으로 크기 증가 (줄인 값)
+                    bgSrdr.size += new Vector2(0, 0.035f); // Y 방향으로 크기 증가 (줄인 값)
                 }
             }
         }

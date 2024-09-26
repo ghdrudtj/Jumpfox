@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8212112772380927451}
   - component: {fileID: 4985615622324432151}
   - component: {fileID: 1170267716399781864}
-  - component: {fileID: 7988474879419574986}
   - component: {fileID: 1506912263625124149}
+  - component: {fileID: 1217858959976178205}
   m_Layer: 0
   m_Name: gem
   m_TagString: Item
@@ -132,7 +132,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13621709, y: 0.116217084}
   m_EdgeRadius: 0
---- !u!95 &7988474879419574986
+--- !u!114 &1506912263625124149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606887816675261675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa69b4f564f2a14cabed6b6af36042b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 1
+--- !u!95 &1217858959976178205
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -153,16 +166,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1506912263625124149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606887816675261675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaa69b4f564f2a14cabed6b6af36042b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 1

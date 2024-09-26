@@ -84,8 +84,8 @@ public class Player : MonoBehaviour
     private void SetIdleState()
     {
         isFloor = true;
-        rb.velocity = Vector2.zero;
         animator.SetInteger("Jump", 0);
+        rb.velocity = Vector2.zero;
         JumpPower = 0;
     }
     public void PlayerMove()
@@ -99,6 +99,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            isFloor = true;
             shouldRotate = true;
         }
         if (collision.gameObject.CompareTag("platform"))
