@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     int playerLayer, platformLayer;
 
     private Rigidbody2D rb;
-    private Animator animator;
+    public Animator animator;
     public SpriteRenderer Renderer;
     public float pleyerY;
 
@@ -53,12 +53,15 @@ public class Player : MonoBehaviour
             }
             else if(Input.GetKeyUp(KeyCode.Space))
             {
-                if (JumpPower < DataBaseManager.instance.maxJumpPower || JumpPower > DataBaseManager.instance.minJumpPower)
+                if (JumpPower < DataBaseManager.instance.maxJumpPower)
                 {
                     isFloor = false;
                     rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
                     JumpPower = 0;
                     animator.SetInteger("Jump", 2);
+
+                    Effect effect = Instantiate(DataBaseManager.instance.effect);
+                    effect.Active(transform.position);
                 }
                 else
                 {
@@ -82,7 +85,7 @@ public class Player : MonoBehaviour
     {
         isFloor = true;
         rb.velocity = Vector2.zero;
-        animator.SetInteger("StateID", 0);
+        animator.SetInteger("Jump", 0);
         JumpPower = 0;
     }
     public void PlayerMove()

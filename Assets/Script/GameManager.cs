@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ScoreManager ScoreManager;
     [SerializeField] private DataBaseManager DataBaseManager;
     [SerializeField] public GameObject rePalyBtn;
-    
+    [SerializeField] public GameObject clearText;
+    private float gameCount = 2;
+
     private void Awake()
     {
         DataBaseManager.Init();
@@ -28,9 +31,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(ScoreManager.instance.totalScore >= 100)
+        if(ScoreManager.instance.totalScore >= DataBaseManager.instance.MaxScore)
         {
-            SceneManager.LoadScene("End");
+            gameCount -= Time.deltaTime;
+            clearText.SetActive(true);
+            if(gameCount <= 0)
+            {
+                 SceneManager.LoadScene("End");
+            }
         }
     }
     public void GameOver()

@@ -12,7 +12,6 @@ public class DataBaseManager : ScriptableObject
     public float JumpPowerIncrease;
     public float GameOverYNeight = -10f;
     public int MoveSpeed;
-    public float minJumpPower;
     public float maxJumpPower;
 
     [Header("ÇÃ·§Æû")]
@@ -30,6 +29,8 @@ public class DataBaseManager : ScriptableObject
     public item baseItem;
     public float itemSpawnPer;
     public int itemScore = 1;
+
+    [Header("Á¡¼ö")]
     public int MaxScore = 100;
 
     [Header("ÇÔÁ¤")]
@@ -40,6 +41,9 @@ public class DataBaseManager : ScriptableObject
     public Monster baseMonster;
     public float MonSpawnPer;
     public int MonMoveSpeed;
+
+    [Header("¿¬Ãâ")]
+    public Effect effect;
     internal void Init()
     {
         instance = this;

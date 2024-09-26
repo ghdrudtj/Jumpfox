@@ -34,10 +34,12 @@ public class CameraManager : MonoBehaviour
             float bgUpY = bgSrdr.transform.position.y + bgSrdr.size.y / 2; // 중앙 기준으로 변경
             float cameraUpY = Camera.main.transform.position.y + cameraWidth / 2;
 
-            float growthAmount = 0.25f;
             if (bgUpY <= cameraUpY)
             {
-                bgSrdr.size = new Vector2(bgSrdr.size.x, bgSrdr.size.y + growthAmount); // x 방향 늘리기 제거
+                if (Player.instance.isFloor == false)
+                {
+                    bgSrdr.size += new Vector2(0, 0.03f); // Y 방향으로 크기 증가 (줄인 값)
+                }
             }
         }
     }
