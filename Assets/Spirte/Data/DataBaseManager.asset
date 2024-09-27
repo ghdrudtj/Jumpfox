@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f27c0403c103544add8a0a5dcc1e90, type: 3}
   m_Name: DataBaseManager
   m_EditorClassIdentifier: 
-  JumpPowerIncrease: 0.25
+  JumpPowerIncrease: 0.35
   GameOverYNeight: -10
   MoveSpeed: 3
   maxJumpPower: 100
@@ -48,7 +48,7 @@ MonoBehaviour:
   baseItem: {fileID: 1506912263625124149, guid: 87877006a8ba6e540883b4bb7046a50f, type: 3}
   itemSpawnPer: 1
   itemScore: 1
-  MaxScore: 5
+  MaxScore: 10
   TrapSpeed: 5
   TrapActiveScore: 3
   baseMonster: {fileID: 2967503038389758692, guid: 8aa1d33957bbc1b459d4ce39ba2ef4e3, type: 3}

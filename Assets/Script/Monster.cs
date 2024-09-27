@@ -26,6 +26,7 @@ public class Monster : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Player"))
         {
+            Player.instance.M_audioSource.Play();
             playerstop();
             MonsterAnim.SetTrigger("Attack");
             Invoke("playerplay", 1f);

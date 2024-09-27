@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     public SpriteRenderer Renderer;
     public float pleyerY;
 
+    public AudioSource M_audioSource;
+    public AudioSource I_audioSource;
+    public AudioSource J_audioSource;
     [SerializeField] public GameObject rePalyBtn;
     void Awake()
     {
@@ -55,6 +58,7 @@ public class Player : MonoBehaviour
             {
                 if (JumpPower < DataBaseManager.instance.maxJumpPower)
                 {
+                    J_audioSource.Play();
                     isFloor = false;
                     rb.AddForce(Vector2.up * JumpPower, ForceMode2D.Impulse);
                     JumpPower = 0;
@@ -110,13 +114,14 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Item"))
         {
             Destroy(collision.gameObject);
+            
         }
         if (collision.gameObject.CompareTag("Trap"))
         {
             rePalyBtn.SetActive(true);
             Debug.Log("게임 오버 ");
         }
-       
+        
     }
    
 }

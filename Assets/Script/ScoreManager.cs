@@ -12,14 +12,30 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private Score baseScore;
 
     public int totalScore;
-    public int BestScore;
+    public int BestScore = 0;
     internal void Init()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            LoadBestScore();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void LoadBestScore()
+    {
+        BestScore = PlayerPrefs.GetInt("BestScore"); // 저장된 최고 점수 불러오기 (기본값 0)
+        Debug.Log("최고 점수 로드: " + BestScore);
     }
     public void AddScore(int score)
     {
+        totalScore += score;
+
         Debug.Log("현점수 = " + totalScore);
+       
     }
     void Start()
     {

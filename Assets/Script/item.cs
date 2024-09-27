@@ -14,21 +14,27 @@ public class item : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            ScoreManager.instance.totalScore += score;
-            Destroy(gameObject);
-
+            Player.instance.I_audioSource.Play();
+            ScoreManager.instance.AddScore(score);
             if (ScoreManager.instance.totalScore > ScoreManager.instance.BestScore)
             {
                 ScoreManager.instance.BestScore = ScoreManager.instance.totalScore;
+                PlayerPrefs.SetInt("BestScore", ScoreManager.instance.BestScore); // 새로운 최고 점수 저장
+                PlayerPrefs.Save();
+                Debug.Log("새로운 최고 점수 = " + ScoreManager.instance.BestScore);
             }
+            Destroy(gameObject);
         }
+        
     }
+    
     void Start()
     {
-        
+        instance = this;
     }
     void Update()
     {
+            
         
     }
 }

@@ -31,7 +31,7 @@ public class DataBaseManager : ScriptableObject
     public int itemScore = 1;
 
     [Header("점수")]
-    public int MaxScore = 100;
+    public int MaxScore;
 
     [Header("함정")]
     public int TrapSpeed;
@@ -42,8 +42,10 @@ public class DataBaseManager : ScriptableObject
     public float MonSpawnPer;
     public int MonMoveSpeed;
 
-    [Header("연출")]
+    [Header("연출 및 소리")]
     public Effect effect;
+   
+
     internal void Init()
     {
         instance = this;
@@ -56,6 +58,6 @@ public class DataBaseManager : ScriptableObject
 
     void Update()
     {
-        
+       
     }
 }
