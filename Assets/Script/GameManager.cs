@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject rePalyBtn;
     [SerializeField] public GameObject clearText;
     private float gameCount = 2;
-
     private void Awake()
     {
         DataBaseManager.Init();

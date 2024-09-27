@@ -29,15 +29,15 @@ MonoBehaviour:
   - {fileID: 1637486296666605394, guid: 74b12a19f82137f4da4b40a7eed23a93, type: 3}
   - {fileID: 8516919516167165205, guid: 8f70b0bc841d341478b872a8661d08aa, type: 3}
   DataArr:
-  - GroupCount: 150
+  - GroupCount: 250
     LargePercent: 0.8
     MiddlePercent: 0.1
     SmallPercent: 0.1
-  - GroupCount: 150
+  - GroupCount: 250
     LargePercent: 0.4
     MiddlePercent: 0.3
     SmallPercent: 0.3
-  - GroupCount: 150
+  - GroupCount: 250
     LargePercent: 0.2
     MiddlePercent: 0.5
     SmallPercent: 0.3
@@ -55,3 +55,5 @@ MonoBehaviour:
   MonSpawnPer: 0.5
   MonMoveSpeed: 2
   effect: {fileID: -6835776161348996328, guid: f62a2a74200ed1443a28db5d051856ac, type: 3}
+  Score: {fileID: 3563476427174951824, guid: 6e9074197e98dbb47877d33ec85e2731, type: 3}
+  D_effect: {fileID: 8475704141409779502, guid: 1b921e83b3d24944e8477386f064692d, type: 3}

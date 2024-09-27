@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Search;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -108,20 +105,25 @@ public class Player : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("platform"))
         {
+            //Platform.instance.OnLanding();
             animator.SetInteger("Jump", 0);
             isFloor = true;
         }
         if (collision.gameObject.CompareTag("Item"))
         {
             Destroy(collision.gameObject);
-            
         }
         if (collision.gameObject.CompareTag("Trap"))
         {
-            rePalyBtn.SetActive(true);
+            Invoke("GameOver", 1f);
             Debug.Log("게임 오버 ");
+            D_Effect effect = Instantiate(DataBaseManager.instance.D_effect);
+            effect.Active(transform.position);
         }
         
     }
-   
+    public void GameOver()
+    {
+        rePalyBtn.SetActive(true);
+    }
 }

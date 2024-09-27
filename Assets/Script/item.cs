@@ -16,6 +16,7 @@ public class item : MonoBehaviour
         {
             Player.instance.I_audioSource.Play();
             ScoreManager.instance.AddScore(score);
+
             if (ScoreManager.instance.totalScore > ScoreManager.instance.BestScore)
             {
                 ScoreManager.instance.BestScore = ScoreManager.instance.totalScore;
@@ -23,6 +24,10 @@ public class item : MonoBehaviour
                 PlayerPrefs.Save();
                 Debug.Log("새로운 최고 점수 = " + ScoreManager.instance.BestScore);
             }
+
+            Score Score = Instantiate(DataBaseManager.instance.Score);
+            Score.Active(transform.position);
+
             Destroy(gameObject);
         }
         

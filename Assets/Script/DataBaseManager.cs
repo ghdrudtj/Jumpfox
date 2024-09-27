@@ -44,8 +44,8 @@ public class DataBaseManager : ScriptableObject
 
     [Header("연출 및 소리")]
     public Effect effect;
-   
-
+    public Score Score;
+    public D_Effect D_effect;
     internal void Init()
     {
         instance = this;

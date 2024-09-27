@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class Platform : MonoBehaviour
 {
     public static Platform instance;
     private BoxCollider2D cof;
+    private Animation anim;
     internal void Active(Vector3 pos)
     {
         transform.position = pos;
@@ -22,6 +20,7 @@ public class Platform : MonoBehaviour
             monster.Active(transform.position, GatHelfSizeX());
         }
     }
+    
     internal void Init()
     {
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9100707937323045316}
   - component: {fileID: 791433071043467816}
   - component: {fileID: 747932335989286258}
+  - component: {fileID: 7833797505448649173}
   m_Layer: 7
   m_Name: platfrom_base
   m_TagString: platform
@@ -59,6 +60,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50152af0a5b0db6429b0fdb2d20728eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!111 &7833797505448649173
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4512187976569082771}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 17ff27f8b21d4b34098f186c94c2ca1c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 17ff27f8b21d4b34098f186c94c2ca1c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5220855500957279569
 GameObject:
   m_ObjectHideFlags: 0

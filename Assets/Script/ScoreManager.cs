@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     }
     private void LoadBestScore()
     {
-        BestScore = PlayerPrefs.GetInt("BestScore"); // 저장된 최고 점수 불러오기 (기본값 0)
+        BestScore = PlayerPrefs.GetInt("BestScore",0); // 저장된 최고 점수 불러오기 (기본값 0)
         Debug.Log("최고 점수 로드: " + BestScore);
     }
     public void AddScore(int score)

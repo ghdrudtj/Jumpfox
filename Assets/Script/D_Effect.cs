@@ -1,20 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using UnityEditor;
 using UnityEngine;
 
-public class Score : MonoBehaviour
+public class D_Effect : MonoBehaviour
 {
-    
     public void Active(Vector3 pos)
     {
         transform.position = pos;
     }
-    public void CallAni1()
+    public void CallAni()
     {
-        Debug.Log("GameObject를 파괴합니다");
         Destroy(gameObject);
     }
-    
 }
