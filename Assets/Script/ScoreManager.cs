@@ -39,7 +39,8 @@ public class ScoreManager : MonoBehaviour
     }
     void Start()
     {
-        
+        PlayerPrefs.SetInt("BestScore", 0);
+        PlayerPrefs.Save();
     }
     void TotalScore()
     {

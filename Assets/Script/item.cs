@@ -36,6 +36,8 @@ public class item : MonoBehaviour
     void Start()
     {
         instance = this;
+        PlayerPrefs.SetInt("BestScore", 0);
+        PlayerPrefs.Save();
     }
     void Update()
     {
